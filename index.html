@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Colores Mágicos - Inicio</title>
+	<link rel="shortcut icon" href="img/icono.png">
+	<link rel="stylesheet" href="css/stylo.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+	<script type="text/javascript" src="javascript/recuperador.js"></script>
+	<script type="text/javascript" src="javascript/precios.js"></script>
+	<script type="text/javascript" src="javascript/horas.js"></script>
+	<script type="text/javascript" src="javascript/deshabilitador_horas.js"></script>
+	<script type="text/javascript" src="javascript/cupones.js"></script>
+</head>
+<body onload="Apagado()">
+	<header>
+		<section id="inicio">
+			<div class="vinculos">
+				<img src="img/colores magicos.png" class="imgcabecera">
+				<nav>
+					<a href="#inicio"><button>Inicio</button></a>
+					<a href="#galeria"><button>Galeria</button></a>
+					<a href="#pedidos"><button>Pedidos</button></a>
+					<a href="#contacto"><button>Contacto</button></a>
+				</nav>
+			</div>
+		</section>
+	</header>
+	<main>
+		<div class="cabecera2">
+			<h1>Bienvenido a Colores Mágicos!</h1>
+			<h2>Nos dedicamos a convertir en realidad los más hermosos trazos</h2>
+			<h3>Conoce nuestros servicios</h3>
+		</div>
+		<div class="servicios">
+			<div class="contenedor">
+				<img src="img/pintacarita.jpg" class="imgtama">
+				<div class="derecha"><!--class="derecha"-->
+					<h3 class="centro">Pintacaritas</h3>
+					<p>Utilizamos pintura apta para el cuidado de la piel en todo tipo de cutis, la piel de los niños es especialmente más sensible ante factores externos ya sean ambientales o productos químicos, por ello estamos comprometidos a utilizar productos de la más alta calidad.</p>
+					<p>Cada instrumento de trabajo es perfectamente cuidado y esterilizado para garantizar un diseño a la altura de nuestros consumidores.</p>
+				</div>
+			</div>
+			<br><br>
+
+			<div class="contenedor">
+				<div class="izquierda">
+					<h3 class="centro2">Caballetes</h3>
+					<p>Los colores son vida, los encontramos en todo lugar y en todo momento, transmitimos esa magia no solo a través de pintacaritas sino en lienzos que tus hijos pueden pintar a su gusto.</p>
+					<p>Nos gusta proporcionar una gran gama de colores a los pequeños para permitir que su imaginación a través de sus manos nos muestre sus sueños e ideas.</p>
+				</div>
+				<img src="img/caballetes.jpg" class="imgtama">
+			</div>
+			<br><br>
+
+			<div class="contenedor">
+				<img src="img/yesos.png" class="imgtama">
+				<div class="derecha">
+					<h3 class="centro">Yesitos</h3>
+					<p>Desde tiempos antiguos el hombre ha dibujado, nos remontamos a la época de las cavernas donde se tenía la creencia de que, al dibujar algo sobre un muro, preservaba su alma. este conocimiento se extendió hasta los grandes escultores</p>
+					<p>Otra forma de expresion es a través de plasmar pintura en figuras de yeso que estamos seguros, permitirán a tus hijos conocer la profundidad de los colores y como estos se pueden utilizar para transmitir mensajes y emociones.</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="titulo_gal">
+			Galería Mágica
+		</div>
+		<br>
+		<section id="galeria" class="galeria">
+			<img src="img/1.jpg">
+			<img src="img/2.jpg">
+			<img src="img/3.jpg">
+			<img src="img/4.jpg">
+			<img src="img/5.jpg">
+			<img src="img/6.jpg">
+			<img src="img/7.jpg">
+			<img src="img/8.jpg">
+		</section>
+		<br><br>
+		<section id="pedidos">
+            <h2>Reserva tu evento</h2>
+			<div class="formu-fondo">
+				<form action="recurso.html" method="post" target="_blank">
+                    <div class="datos-cliente">
+                        <div class="titulo-flot">Datos del cliente</div>
+                        <div class="cont-cliente">
+                           <input type="text" name="nombre" id="nombre" onfocusout="formulario(1)" required>
+					       <label for="nombre" id="lab-nombre" class="interno">Nombre</label>
+                        </div>
+                        <div class="cont-cliente">
+                            <input type="text" name="direccion" id="direccion" onfocusout="formulario(2)" required>
+                            <br>
+                            <label for="direccion" id="lab-direccion" class="interno">Direccion </label>
+                        </div>
+                        <div class="cont-cliente">
+                            <input type="email" name="correo" id="correo" onfocusout="formulario(3)" required>
+                            <br>
+                            <label for="correo" id="lab-correo" class="interno">Correo </label>
+                        </div>
+                    </div>
+                    <div class="datos-evento">
+                        <div class="titulo-flot">Datos del evento</div>
+                        <div class="evento-container">
+                            <div class="sub-flot" id="datos1">Lugar y fecha</div>
+                            <label for="sitiofecha">Localidad</label>
+                            <select id="sitiofecha" name="sitiofecha" onchange="getPrecios()" class="fecha">
+                                <option value="1">Benito Juárez</option>
+                                <option value="1">Jardines del Río</option>
+                                <option value="1">Jardines de Guadalupe</option>
+                                <option value="1">Jardines de San Miguel</option>
+                                <option value="1">Nuevo San Miguel</option>
+                                <option value="1">Fomerrey 31</option>
+                                <option value="1">Nuevo Milenio</option>
+                                <option value="1">Fraccionamiento 7 colinas (Gpe)</option>
+                                <option value="2">Apodaca</option>
+                                <option value="2">San Nicolás</option>
+                                <option value="2">Pescadería</option>
+                                <option value="2">Santa María</option>
+                                <option value="2">Otro</option>
+                            </select>
+                            <label for="fecha">Fecha del evento</label>
+							<input type="date" name="fecha" id="fecha" class="fecha" required>
+							<label for="horaI">Hora de inicio </label>
+							<input type="time" name="horario" id="horaI" min="09:00" max="21:00" class="fecha" required>
+							<label for="horaF">Hora de cierre </label>								
+                            <input type="time" name="horario" min="10:00" max="23:00" id="horaF" class="fecha" required>
+                        </div>
+                        <div class="evento-container">
+                            <div class="sub-flot" id="datos3">Servicios y paquetes</div>
+                            
+                            <div class="paquetes">
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s1" id="s1" class="offscreen" onclick="getOpcion()">
+                                <label for="s1" class="switch"></label>
+                            </div>
+                            <p>Caballetes</p>
+							<input type="text" id="paq1" hidden>
+							<select name="horas" id="h1" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+                            </div>
+                            <div class="paquetes">    
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s2" id="s2" class="offscreen" onclick="getOpcion()">
+                                <label for="s2" class="switch"></label>
+                            </div>
+                            <p>Pintacaritas</p>
+							<input type="text" id="paq2" hidden>
+							<select name="horas" id="h2" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+                            </div>
+                            <div class="paquetes">
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s3" id="s3" class="offscreen" onclick="getOpcion()">
+                                <label for="s3" class="switch"></label>
+                            </div>
+                            <p>Yesitos</p>
+							<input type="text" id="paq3" hidden>
+							<select name="horas" id="h3" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+                            </div>
+                            <div class="paquetes">
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s4" id="s4" class="offscreen" onclick="getOpcion()">
+                                <label for="s4" class="switch"></label>
+                            </div>
+                            <p>Caballetes y pintacaritas</p>
+							<input type="text" id="paq4" hidden>
+							<select name="horas" id="h4" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+                            </div>
+                            <div class="paquetes">
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s5" id="s5" class="offscreen" onclick="getOpcion()">
+                                <label for="s5" class="switch"></label>
+                            </div>
+                            <p>Pintacaritas y yesitos</p>
+                            <input type="text" id="paq5" hidden>
+							<select name="horas" id="h5" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+                            </div>
+                            <div class="paquetes">
+                            <div class="cont-toggle">
+                                <input type="checkbox" name="s6" id="s6" class="offscreen" onclick="getOpcion()">
+                                <label for="s6" class="switch"></label>
+                            </div>
+                            <p>Cabaletes y yesitos</p>
+							<input type="text" id="paq6" hidden>
+							<select name="horas" id="h6" class="horas">
+								<option value="1">1</option>
+								<option value="2">2</option>
+                                <option value="3">3</option>
+							</select>
+                            </div>
+                        </div><!--CIERRE area paquetes-->
+                    </div>
+                    <div class="datos-pago">
+                        <div class="titulo-flot">Pago</div>
+                        <div class="descuentos">
+                            <div class="descuentos-conta">
+                                <input type="text" name="codigo" id="codigo">
+                                <label for="codigo">Código de descuento</label>
+                                <button type="button" id="cupon" onclick="cuponera()"><b>Validar</b></button>
+	                        </div>
+                            <div class="descuentos-conta">
+                                <input type="number" name="descuento" min="0" id="descuento" value="0" readonly>
+                                <label for="descuento">Descuento</label>
+                            </div>
+                            <div class="descuentos-conta">
+                                <input type="number" id="anticipo" name="anticipo">
+                                <label for="anticipo" value="0">Anticipo</label>                                
+                            <!--img src="img/Plantilla.png" id="miImg" hidden>
+                            <canvas id="micanvas" width="1000" height="2000">		
+                            </canvas-->
+                            </div>
+                        </div>
+						<button type="submit" onclick="local_storage()" id="enviar">
+							Enviar!
+						</button>
+                    </div>
+				</form>
+			</div><!--CIERRE DE FORMULARIO-->
+		</section>
+		
+	</main>
+	<br><br><br>
+	<footer>
+		<section id="contacto">
+			<div class="info">
+			<ul>
+				<h3>Dónde nos encontramos</h3>
+				<li>Monterrey N.L.</li>
+				<li>CP: 02330</li>
+				<li>Agustin Melgar #3</li>
+			</ul>
+
+			<img src="img/colores magicos.png" class="colores2">
+
+			<ul>
+				<div class="redes">
+					<h3>Redes Sociales</h3>
+					<li><img src="img/neko.png"> Facebook: /ColoresMagicosMTY</li>
+					<li><img src="img/wsp.png"> Whatsapp: 81 1567 7849</li>
+					<li><img src="img/Gmail2.svg"> Gmail: coloresmagicosmty@gmail.com</li>
+				</div>
+			</ul>
+		</div>
+		</section>
+	</footer>
+</body>
+</html>
