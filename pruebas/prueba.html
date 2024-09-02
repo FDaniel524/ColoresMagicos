@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="recuperador.js"></script>
+	<script src="pruebajs.js"></script>
+	<link rel="stylesheet" href="estilos.css">
+	<title>Primera pagina</title>
+</head>
+<body onload="local_storage()">
+		<form action="prueba2ht.html" method="post">
+			<input type="text" name="nombre" id="nombre">
+			<button type="submit"  id="enviar">
+				Enviar!
+			</button>
+			<br><br>
+			<label for="fecha">Ingresa fecha</label>
+			<input type="date" name="fecha" id="fecha">
+			<button type="button" onclick="getFecha()">
+				Fecha
+			</button>
+		</form>
+		<a href="prueba2ht.html">
+			<button>
+				Ir al sitio
+			</button>
+		</a>
+</body>
+</html>
